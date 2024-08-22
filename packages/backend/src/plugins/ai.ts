@@ -50,15 +50,15 @@ export default async function createPlugin({
     discovery,
     config,
     options: {
-      region: 'eu-central-1',
+      region: 'ca-central-1',
       credentials: credProvider.sdkCredentialProvider,
     },
   });
 
   const model = new Bedrock({
     maxTokens: 4096,
-    model: 'anthropic.claude-instant-v1', // 'amazon.titan-text-express-v1', 'anthropic.claude-v2', 'mistral-xx'
-    region: 'eu-central-1',
+    model: 'amazon.titan-embed-text-v2:0', // 'amazon.titan-text-express-v1', 'anthropic.claude-v2', 'mistral-xx'
+    region: 'ca-central-1',
     credentials: credProvider.sdkCredentialProvider,
   });
 
